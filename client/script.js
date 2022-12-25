@@ -12,7 +12,7 @@ function loader(element) {
   loadInterval = setInterval(() => {
     element.textContent += '.';
 
-    if (element.textContent === '....') {
+    if (element.textContext === '....') {
       element.textContent = '';
     }
   }, 300)
@@ -79,7 +79,7 @@ const handleSubmit = async (e) => {
 
   // fetch data from server -> bot's response
 
-  const response = await fetch('https://g-data.onrender.com/', {
+  const response = await fetch('http://localhost:5000', {
     method: 'POST', 
     headers: {
       'Content-Type': 'application/json'
